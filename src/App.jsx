@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
@@ -11,7 +10,7 @@ import WorkProcess from './sections/WorkProcess';
 import AppScreens from './sections/AppScreens ';
 import CTASection from './sections/CTASection';
 import PricingSection from './sections/PricingSection';
-import Testimonials from './sections/Testimonials';
+import Testimonials from './sections/Testimonials'; 
 import Support from './sections/Support';
 import Footer from './sections/Footer';
 import SignIn from './pages/Signin';
