@@ -10,7 +10,7 @@ import WorkProcess from './sections/WorkProcess';
 import AppScreens from './sections/AppScreens ';
 import CTASection from './sections/CTASection';
 import PricingSection from './sections/PricingSection';
-import Testimonials from './sections/Testimonials'; 
+import Testimonials from './sections/Testimonials';
 import Support from './sections/Support';
 import Footer from './sections/Footer';
 import SignIn from './pages/Signin';
@@ -58,7 +58,7 @@ function App() {
           />
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
-          <Route path="/privacy-polcy" element={<PrivacyPolicy />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsAndConditions />} />
           {/* <Route path="/features" element={<Features />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
