@@ -5,135 +5,40 @@ const Footer = () => {
     <footer>
       {/* Top Section */}
       <div className="bg-[#F8FAFB] pt-[95px] pb-[46px] dark:bg-[#15182A]">
-        <div className="container max-w-[1390px]">
+        <div className="w-full px-4">
           <div className="-mx-4 flex flex-wrap">
-            {/* Logo & Description */}
-            <div className="w-full px-4 lg:w-4/12 xl:w-5/12">
+
+            {/* Logo & Description (%) */}
+            <div className="w-full px-4 container max-w-[1390px]">
               <div
-                className="wow fadeInUp mb-11 max-w-[320px]"
+                className="wow fadeInUp mb-11"
                 data-wow-delay=".2s"
               >
                 <a href="/" className="mb-8 inline-block">
                   <img
-                    src="images/logo.svg"
+                    src="/src/assets/logo.png"
                     alt="logo"
-                    className="block max-w-full dark:hidden"
+                    className="block w-[250px] dark:hidden"
                   />
                   <img
-                    src="images/logo-white.svg"
+                    src="/src/assets/logo.png"
                     alt="logo"
-                    className="hidden max-w-full dark:block"
+                    className="hidden w-[250px] dark:block"
                   />
                 </a>
-                <p className="text-base text-body">
-                  This membership will help you plan and execute a variety of
-                  projects.
+
+                <p className="text-base text-body text-gray-600 dark:text-gray-300">
+                  We are <a href="https://www.edmondremedis.com/"><b>Edmond Remedis</b></a>,
+                  the creators of BeautyTap — a smart, modern platform designed to help beauty
+                  parlours grow effortlessly. Our mission is to simplify salon management,
+                  connect owners with customers instantly, and bring digital innovation to
+                  the beauty industry. With user-friendly features, trusted technology,
+                  and a vision for upgrading every salon experience, we are committed to
+                  taking your beauty business to the next level.
                 </p>
               </div>
             </div>
 
-            {/* Footer Links */}
-            <div className="w-full px-4 lg:w-8/12 xl:w-7/12">
-              <div className="-mx-4 flex flex-wrap">
-                {/* Home */}
-                <div className="w-full px-4 sm:w-1/2 md:w-2/12 lg:w-2/12">
-                  <div className="wow fadeInUp mb-11" data-wow-delay=".25s">
-                    <h3 className="mb-8 text-[22px] font-medium text-black dark:text-white">
-                      Home
-                    </h3>
-                    <ul className="space-y-[10px]">
-                      {["Product", "Pricing", "Business", "Enterprise"].map(
-                        (item, index) => (
-                          <li key={index}>
-                            <a
-                              href="#"
-                              className="inline-block text-base text-body hover:text-primary"
-                            >
-                              {item}
-                            </a>
-                          </li>
-                        )
-                      )}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* About Us */}
-                <div className="w-full px-4 sm:w-1/2 md:w-3/12 lg:w-3/12">
-                  <div className="wow fadeInUp mb-11" data-wow-delay=".3s">
-                    <h3 className="mb-8 text-[22px] font-medium text-black dark:text-white">
-                      About Us
-                    </h3>
-                    <ul className="space-y-[10px]">
-                      {["Company", "Leadership", "Careers", "Diversity"].map(
-                        (item, index) => (
-                          <li key={index}>
-                            <a
-                              href="#"
-                              className="inline-block text-base text-body hover:text-primary"
-                            >
-                              {item}
-                            </a>
-                          </li>
-                        )
-                      )}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Resources */}
-                <div className="w-full px-4 sm:w-1/2 md:w-3/12 lg:w-3/12">
-                  <div className="wow fadeInUp mb-11" data-wow-delay=".35s">
-                    <h3 className="mb-8 text-[22px] font-medium text-black dark:text-white">
-                      Resources
-                    </h3>
-                    <ul className="space-y-[10px]">
-                      {[
-                        "Andy Guide",
-                        "Forum",
-                        "Support",
-                        "App Directory",
-                      ].map((item, index) => (
-                        <li key={index}>
-                          <a
-                            href="#"
-                            className="inline-block text-base text-body hover:text-primary"
-                          >
-                            {item}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Tutorial */}
-                <div className="w-full px-4 sm:w-1/2 md:w-4/12 lg:w-4/12">
-                  <div className="wow fadeInUp mb-11" data-wow-delay=".4s">
-                    <h3 className="mb-8 text-[22px] font-medium text-black dark:text-white">
-                      Tutorial
-                    </h3>
-                    <ul className="space-y-[10px]">
-                      {[
-                        "10 Leadership Styles",
-                        "Executive Summary Tips",
-                        "Prevent Team Burnout",
-                        "What are OKRs?",
-                      ].map((item, index) => (
-                        <li key={index}>
-                          <a
-                            href="#"
-                            className="inline-block text-base text-body hover:text-primary"
-                          >
-                            {item}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -145,42 +50,77 @@ const Footer = () => {
       >
         <div className="container max-w-[1390px]">
           <div className="-mx-3 flex flex-wrap">
+
             {/* Copyright */}
             <div className="order-last w-full px-3 lg:order-first lg:w-1/3">
               <p className="mt-4 text-center text-base text-white lg:mt-0 lg:text-left">
-                &copy; 2025 Appline. All rights reserved
+                &copy; 2025 BeautyTap. All rights reserved
               </p>
             </div>
 
             {/* Social Icons */}
             <div className="w-full px-3 md:w-1/2 lg:w-1/3">
               <div className="mb-4 flex items-center justify-center space-x-5 md:mb-0 md:justify-start lg:justify-center">
-                {["facebook", "twitter", "linkedin", "behance"].map(
-                  (social, index) => (
-                    <a
-                      key={index}
-                      href="#"
-                      className="text-white opacity-70 hover:opacity-100"
-                      aria-label={social}
-                    >
-                      <SocialIcon name={social} />
-                    </a>
-                  )
-                )}
+
+                {/* Facebook */}
+                <a
+                  href="https://www.facebook.com/profile.php?id=61583502156804"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white opacity-70 hover:opacity-100"
+                  aria-label="facebook"
+                >
+                  <SocialIcon name="facebook" />
+                </a>
+
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/beautytap__erpl/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white opacity-70 hover:opacity-100"
+                  aria-label="instagram"
+                >
+                  <SocialIcon name="instagram" />
+                </a>
+
+                {/* LinkedIn */}
+                <a
+                  href="https://www.linkedin.com/in/beauty-tap-a8989b398/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white opacity-70 hover:opacity-100"
+                  aria-label="linkedin"
+                >
+                  <SocialIcon name="linkedin" />
+                </a>
+
+                {/* YouTube */}
+                <a
+                  href="https://www.youtube.com/@BeautyTap_erpl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white opacity-70 hover:opacity-100"
+                  aria-label="youtube"
+                >
+                  <SocialIcon name="youtube" />
+                </a>
+
               </div>
             </div>
 
             {/* Privacy / Terms */}
             <div className="w-full px-3 md:w-1/2 lg:w-1/3">
               <div className="flex items-center justify-center space-x-4 sm:space-x-8 md:justify-end">
-                <a href="#" className="text-base text-white">
+                <a href="/privacy-polcy" className="text-base text-white ">
                   Privacy Policy
                 </a>
-                <a href="#" className="text-base text-white">
-                  Terms and Conditions
+                <a href="/terms-conditions" className="text-base text-white ">
+                  Terms & Conditions
                 </a>
               </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -188,69 +128,50 @@ const Footer = () => {
   );
 };
 
+
 // SVG Social Icons
 const SocialIcon = ({ name }) => {
   switch (name) {
     case "facebook":
       return (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
             d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47 14 5.5 16 5.5H17.5V2.14C17.174 2.097 15.943 2 14.643 2C11.928 2 10 3.657 10 6.7V9.5H7V13.5H10V22H14V13.5Z"
             fill="white"
           />
         </svg>
       );
-    case "twitter":
+
+    case "instagram":
       return (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
-            d="M22.162 5.65593C21.3986 5.99362 20.589 6.2154 19.76 6.31393C20.6337 5.79136 21.2877 4.96894 21.6 3.99993C20.78 4.48793 19.881 4.82993 18.944 5.01493C18.3146 4.34151 17.4804 3.89489 16.571 3.74451C15.6615 3.59413 14.7279 3.74842 13.9153 4.18338C13.1026 4.61834 12.4564 5.30961 12.0771 6.14972C11.6978 6.98983 11.6067 7.93171 11.818 8.82893C10.1551 8.74558 8.52833 8.31345 7.04329 7.56059C5.55824 6.80773 4.24813 5.75098 3.198 4.45893C2.82629 5.09738 2.63095 5.82315 2.632 6.56193C2.632 8.01193 3.37 9.29293 4.492 10.0429C3.82801 10.022 3.17863 9.84271 2.598 9.51993V9.57193C2.5982 10.5376 2.93237 11.4735 3.54385 12.221C4.15533 12.9684 5.00648 13.4814 5.953 13.6729C5.33661 13.84 4.69031 13.8646 4.063 13.7449C4.32987 14.5762 4.85001 15.3031 5.55059 15.824C6.25118 16.345 7.09713 16.6337 7.97 16.6499C7.10248 17.3313 6.10918 17.8349 5.04688 18.1321C3.98458 18.4293 2.87413 18.5142 1.779 18.3819C3.6907 19.6114 5.9161 20.2641 8.189 20.2619C15.882 20.2619 20.089 13.8889 20.089 8.36193C20.089 8.18193 20.084 7.99993 20.076 7.82193C20.8949 7.2301 21.6016 6.49695 22.163 5.65693L22.162 5.65593Z"
+            d="M7 2H17C20.3 2 22 3.7 22 7V17C22 20.3 20.3 22 17 22H7C3.7 22 2 20.3 2 17V7C2 3.7 3.7 2 7 2ZM12 7.5C9.5 7.5 7.5 9.5 7.5 12C7.5 14.5 9.5 16.5 12 16.5C14.5 16.5 16.5 14.5 16.5 12C16.5 9.5 14.5 7.5 12 7.5ZM18 7.2C17.3 7.2 16.8 7.7 16.8 8.4C16.8 9.1 17.3 9.6 18 9.6C18.7 9.6 19.2 9.1 19.2 8.4C19.2 7.7 18.7 7.2 18 7.2Z"
             fill="white"
           />
         </svg>
       );
+
     case "linkedin":
       return (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
-            d="M6.94 5.00002C6.93974 5.53046 6.72877 6.03906 6.35351 6.41394C5.97825 6.78883 5.46943 6.99929 4.939 6.99902C4.40857 6.99876 3.89996 6.78779 3.52508 6.41253C3.15019 6.03727 2.93973 5.52846 2.94 4.99802C2.94027 4.46759 3.15123 3.95899 3.52649 3.5841C3.90175 3.20922 4.41057 2.99876 4.941 2.99902C5.47143 2.99929 5.98004 3.21026 6.35492 3.58552C6.72981 3.96078 6.94027 4.46959 6.94 5.00002ZM7 8.48002H3V21H7V8.48002ZM13.32 8.48002H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.90002 14.94 7.13002 13.28 10.16L13.32 8.48002Z"
+            d="M6.94 5C6.94 6.1 6.1 6.94 5 6.94C3.9 6.94 3.06 6.1 3.06 5C3.06 3.9 3.9 3.06 5 3.06C6.1 3.06 6.94 3.9 6.94 5ZM7 8.48H3V21H7V8.48ZM13.32 8.48H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.9 14.94 7.13 13.28 10.16V8.48H13.32Z"
             fill="white"
           />
         </svg>
       );
-    case "behance":
+
+    case "youtube":
       return (
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
-            d="M7.443 5.3501C8.082 5.3501 8.673 5.4001 9.213 5.5481C9.70302 5.63814 10.1708 5.82293 10.59 6.0921C10.984 6.3391 11.279 6.6861 11.475 7.1311C11.672 7.5761 11.77 8.1211 11.77 8.7141C11.77 9.4071 11.623 10.0001 11.279 10.4451C10.984 10.8911 10.492 11.2861 9.902 11.5831C10.738 11.8311 11.377 12.2761 11.77 12.8691C12.164 13.4631 12.41 14.2051 12.41 15.0461C12.41 15.7391 12.262 16.3321 12.016 16.8271C11.77 17.3221 11.377 17.7671 10.934 18.0641C10.4528 18.3825 9.92084 18.6165 9.361 18.7561C8.771 18.9051 8.181 19.0041 7.591 19.0041H1V5.3501H7.443Z"
+            d="M10 15.5L16 12L10 8.5V15.5ZM21.8 7.2C22 8 22 9.3 22 12C22 14.7 22 16 21.8 16.8C21.6 17.6 21.1 18.1 20.3 18.3C19.5 18.5 18.2 18.5 15.5 18.5H8.5C5.8 18.5 4.5 18.5 3.7 18.3C2.9 18.1 2.4 17.6 2.2 16.8C2 16 2 14.7 2 12C2 9.3 2 8 2.2 7.2C2.4 6.4 2.9 5.9 3.7 5.7C4.5 5.5 5.8 5.5 8.5 5.5H15.5C18.2 5.5 19.5 5.5 20.3 5.7C21.1 5.9 21.6 6.4 21.8 7.2Z"
             fill="white"
           />
         </svg>
       );
+
     default:
       return null;
   }

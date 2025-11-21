@@ -17,7 +17,7 @@ const PricingSection = () => {
     },
     {
       name: "Unlimited",
-      price: 35,
+      price: 2900, // ₹
       period: "/month",
       desc: "Lorem Ipsum is simply dummythe.",
       features: [
@@ -31,7 +31,7 @@ const PricingSection = () => {
     },
     {
       name: "Business",
-      price: 59,
+      price: 4900, // ₹
       period: "/month",
       desc: "Lorem Ipsum is simply dummythe.",
       features: [
@@ -53,9 +53,7 @@ const PricingSection = () => {
             Choose Your Plan
           </h2>
           <p className="text-base text-body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-            convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-            ante in maximus.
+            Select the plan that fits your needs and start your journey with us.
           </p>
         </div>
       </div>
@@ -94,7 +92,7 @@ const PricingSection = () => {
 
                 <p className="border-b border-stroke pb-5 text-black dark:border-stroke-dark dark:text-white">
                   <span className="text-[40px] font-bold leading-none">
-                    <sup className="text-[22px] font-medium">$</sup> {plan.price}
+                    <sup className="text-[22px] font-medium">₹</sup> {plan.price}
                   </span>
                   <span className="text-base text-body"> {plan.period}</span>
                 </p>

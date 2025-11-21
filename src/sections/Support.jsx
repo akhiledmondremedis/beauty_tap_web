@@ -36,9 +36,7 @@ const Support = () => {
             Let's Stay Connected
           </h2>
           <p className="text-base text-body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-            convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-            ante in maximus.
+           Stay in touch with us for updates, news, and support.
           </p>
         </div>
 

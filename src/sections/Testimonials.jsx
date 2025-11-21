@@ -4,29 +4,29 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Musharof Chowdhury",
-      title: "Web Entrepreneur",
+      name: "Priya",
+      title: "Beauty Studio",
       image: "images/author-1.png",
       text: "BeautyTap helped my salon reach more local customers. Easy to use and manage.",
     },
     {
       id: 2,
-      name: "Naimur Rahman",
-      title: "Product Designer",
+      name: "Kayathri",
+      title: "Kayathri Beauty Shalon",
       image: "images/author-2.png",
       text: "Perfect for both parlours and clients. Highly recommended.",
     },
     {
       id: 3,
-      name: "Devid Miller",
-      title: "App Developer",
+      name: "Anjana",
+      title: "Indira Parlour",
       image: "images/author-3.png",
       text: "Booking haircuts and grooming sessions is so simple now!",
     },
     {
       id: 4,
-      name: "Justin Fernandes",
-      title: "SEO Expert",
+      name: "Rajalekshmi",
+      title: "Lekshmi Shalon",
       image: "images/author-04.png",
       text: "BeautyTap helped my salon reach more local customers. Easy to use and manage.",
     },
@@ -40,8 +40,7 @@ const Testimonials = () => {
             What Client's Say
           </h2>
           <p className="text-base text-body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
-            tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.
+Trusted by professionals — see what they say about us.
           </p>
         </div>
 

@@ -22,6 +22,7 @@ const Header = () => {
                                 <li><Link to="/features" className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary lg:py-7">Features</Link></li>
                                 <li><Link to="/benifits" className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary lg:py-7">Benifits</Link></li>
                                 <li><Link to="/how-it-works" className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary lg:py-7">How It Works</Link></li>
+                                <li><Link to="/pricing" className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary lg:py-7">Pricing</Link></li>
                                 <li><Link to="/support" className="menu-scroll inline-flex items-center text-base font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary lg:py-7">Support</Link></li>
                             </ul>
                         </nav>
@@ -89,8 +90,8 @@ const Header = () => {
                                 </svg>
                             </span>
                         </label>
-                        <Link to="/signin" className="hidden py-[10px] px-6 text-base font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary sm:inline-block">Sign In</Link>
-                        <Link to="/signup" className="hidden rounded-md bg-primary py-[10px] px-[30px] text-base font-medium text-white hover:bg-opacity-90 sm:inline-block">Sign Up</Link>
+                        <Link to="/sign-in" className="hidden py-[10px] px-6 text-base font-medium text-black hover:text-primary dark:text-white dark:hover:text-primary sm:inline-block">Sign In</Link>
+                        <Link to="/sign-up" className="hidden rounded-md bg-primary py-[10px] px-[30px] text-base font-medium text-white hover:bg-opacity-90 sm:inline-block">Sign Up</Link>
                     </div>
                 </div>
             </div>

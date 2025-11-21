@@ -28,7 +28,7 @@ const Hero = () => {
                                 {/* Android Button */}
                                 <a
                                     href="#"
-                                    className="mr-6 mb-6 inline-flex h-[60px] items-center rounded-lg bg-green-600 py-[14px] px-[30px] text-white hover:bg-green-700 dark:bg-white dark:text-black dark:hover:bg-opacity-90"
+                                    className="mr-6 mb-6 inline-flex h-[60px] items-center rounded-lg bg-primary py-[14px] px-[30px] text-white hover:bg-opacity-90 dark:bg-white dark:text-black dark:hover:bg-opacity-90"
                                 >
                                     <span className="mr-[18px] border-r border-white/40 pr-[18px] leading-relaxed dark:border-[#BDBDBD]">
                                         Download Now
@@ -111,7 +111,7 @@ const Hero = () => {
                                             />
                                             <path
                                                 d="M59.3487 24.4888C59.3506 24.4451 59.3528 24.4018 59.3552 24.3589C59.3532 24.4023 59.351 24.4456 59.3487 24.4888C59.1459 28.942 61.3466 37.4702 71.8196 36.9608C67.5418 37.2606 59.0645 40.3 59.3543 50.0568C59.2213 45.8014 56.4667 37.3926 46.5259 37.3459C46.4359 37.3473 46.3475 37.3475 46.261 37.3466C46.3499 37.3457 46.4382 37.3454 46.5259 37.3459C50.7458 37.2807 58.794 34.6559 59.3487 24.4888Z"
-                                                fill="#19DEBB"
+                                                fill="#a192ea"
                                             />
                                         </g>
                                         <defs>

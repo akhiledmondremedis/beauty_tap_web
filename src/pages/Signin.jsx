@@ -1,0 +1,127 @@
+import React from "react";
+
+const SignIn = () => {
+  return (
+    <section className="pt-[150px] pb-[110px] lg:pt-[220px]">
+      <div className="container overflow-hidden lg:max-w-[1250px]">
+        <div
+          className="wow fadeInUp mx-auto w-full max-w-[520px] rounded-lg bg-[#F8FAFB] py-10 px-6 shadow-card dark:bg-[#15182A] dark:shadow-card-dark sm:p-[50px]"
+          data-wow-delay=".2s"
+        >
+
+
+          {/* Title */}
+          <div className="text-center">
+            <h3 className="mb-[10px] text-2xl font-bold text-black dark:text-white sm:text-[28px]">
+              Sign in to your account
+            </h3>
+            <p className="mb-11 text-base text-body">
+              Login to your account for a faster checkout.
+            </p>
+
+            {/* Google Button */}
+            <button className="mb-6 flex w-full items-center justify-center rounded-md border border-stroke bg-white p-3 text-base font-medium text-body hover:text-primary dark:border-stroke-dark dark:bg-dark">
+              <span className="mr-3">
+                {/* Google SVG */}
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clipPath="url(#clip0)">
+                    <path
+                      d="M20 10.2216C20.0121 9.53416 19.9397 8.84776 19.7844 8.17725H10.2041V11.8883H15.8276C15.7211 12.539 15.4814 13.1618 15.1229 13.7194C14.7644 14.2769 14.2945 14.7577 13.7415 15.1327L13.7219 15.257L16.7512 17.5567L16.9609 17.5772C18.8883 15.8328 19.9996 13.266 19.9996 10.2216"
+                      fill="#4285F4"
+                    />
+                    <path
+                      d="M10.204 19.9998C12.959 19.9998 15.272 19.1109 16.9615 17.5775L13.7414 15.133C12.8798 15.722 11.7234 16.1332 10.204 16.1332C8.91366 16.1258 7.65844 15.7203 6.61645 14.9744C5.57445 14.2285 4.7986 13.1799 4.39897 11.9775L4.27938 11.9875L1.12955 14.3764L1.08838 14.4886C1.93671 16.1455 3.23861 17.5384 4.84851 18.5117C6.4584 19.485 8.31283 20.0002 10.2044 19.9998"
+                      fill="#34A853"
+                    />
+                    <path
+                      d="M4.39899 11.9777C4.1758 11.3411 4.06063 10.673 4.05807 9.99996C4.06218 9.32799 4.1731 8.66075 4.38684 8.02225L4.38115 7.88968L1.19269 5.4624L1.0884 5.51101C0.372763 6.90343 0 8.4408 0 9.99987C0 11.5589 0.372763 13.0963 1.0884 14.4887L4.39899 11.9777Z"
+                      fill="#FBBC05"
+                    />
+                    <path
+                      d="M10.2039 3.86687C11.6661 3.84462 13.0802 4.37827 14.1495 5.35583L17.0294 2.60021C15.1823 0.902092 12.7364 -0.0296414 10.2039 0.000207357C8.31236 -0.000233694 6.45795 0.514977 4.84805 1.48823C3.23816 2.46148 1.93625 3.85441 1.08789 5.51125L4.3875 8.02249C4.79107 6.8203 5.5695 5.77255 6.61303 5.02699C7.65655 4.28143 8.91255 3.87565 10.2039 3.86687Z"
+                      fill="#EB4335"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              Sign in with Google
+            </button>
+
+            {/* OR Divider */}
+            <div className="relative z-10 mb-[30px] flex items-center">
+              <span className="hidden h-[1px] w-full max-w-[70px] bg-stroke dark:bg-stroke-dark sm:block"></span>
+              <p className="w-full px-5 text-base text-body">
+                Or, sign in with your email
+              </p>
+              <span className="hidden h-[1px] w-full max-w-[70px] bg-stroke dark:bg-stroke-dark sm:block"></span>
+            </div>
+          </div>
+
+          {/* FORM */}
+          <form>
+            <div className="mb-5">
+              <label className="mb-[10px] block text-sm text-black dark:text-white">
+                Your Email
+              </label>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="w-full rounded-md border border-stroke bg-white py-3 px-6 text-base font-medium text-body outline-none focus:border-primary focus:shadow-input dark:border-stroke-dark dark:bg-black dark:text-white dark:focus:border-primary"
+              />
+            </div>
+
+            <div className="mb-6">
+              <label className="mb-[10px] block text-sm text-black dark:text-white">
+                Your password
+              </label>
+              <input
+                type="password"
+                placeholder="Enter your password"
+                className="w-full rounded-md border border-stroke bg-white py-3 px-6 text-base font-medium text-body outline-none focus:border-primary focus:shadow-input dark:border-stroke-dark dark:bg-black dark:text-white dark:focus:border-primary"
+              />
+            </div>
+
+            <div className="-mx-2 mb-[30px] flex flex-wrap justify-between">
+              <div className="w-full px-2 sm:w-1/2">
+                <label className="mb-4 flex cursor-pointer select-none items-center text-base text-body sm:mb-0">
+                  <input
+                    type="checkbox"
+                    className="keep-signed sr-only"
+                  />
+                  <span className="box mr-[10px] flex h-[22px] w-[22px] items-center justify-center rounded-sm border-[.7px] border-stroke bg-white dark:border-stroke-dark dark:bg-black"></span>
+                  Keep me signed in
+                </label>
+              </div>
+
+              <div className="w-full px-2 sm:w-1/2">
+                <a href="#" className="text-base text-primary hover:underline sm:text-right">
+                  Forgot Password?
+                </a>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              className="flex w-full justify-center rounded-md bg-primary p-3 text-base font-medium text-white hover:bg-opacity-90"
+            >
+              Sign In
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default SignIn;

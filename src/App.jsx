@@ -12,10 +12,16 @@ import AppScreens from './sections/AppScreens ';
 import CTASection from './sections/CTASection';
 import PricingSection from './sections/PricingSection';
 import Testimonials from './sections/Testimonials';
-import Clients from './sections/Clients';
 import Support from './sections/Support';
 import Footer from './sections/Footer';
+import SignIn from './pages/Signin';
 import { useEffect } from "react";
+import SignUp from './pages/Signup';
+import PrivacyPolicy from './pages/Privacypolcy.jsx';
+import TermsAndConditions from './pages/Termsconditions.jsx';
+
+
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -32,24 +38,36 @@ function App() {
     <>
       <main>
         <Header />
-        <Hero />
-        <Features />
-        <Benifits />
-        <WorkProcess />
-        <AppScreens />
-        <CTASection />
-        <PricingSection/>
-        <Testimonials />
-        <Clients />
-        <Support />
-        <Footer />
+
         <Routes>
-          {/* <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/features" element={<Features />} />
+
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <Features />
+                <Benifits />
+                <WorkProcess />
+                <AppScreens />
+                <CTASection />
+                <PricingSection />
+                <Testimonials />
+                <Support />
+              </>
+            }
+          />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/privacy-polcy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsAndConditions />} />
+          {/* <Route path="/features" element={<Features />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/support" element={<Support />} /> */}
         </Routes>
+
+        <Footer />
+
       </main>
     </>
   )
