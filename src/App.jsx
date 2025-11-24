@@ -1,6 +1,5 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState, useEffect } from 'react';
+import './App.css';
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Hero from "./sections/Hero";
@@ -14,13 +13,11 @@ import Testimonials from './sections/Testimonials';
 import Support from './sections/Support';
 import Footer from './sections/Footer';
 import SignIn from './pages/Signin';
-import { useEffect } from "react";
 import SignUp from './pages/Signup';
 import PrivacyPolicy from './pages/Privacypolcy.jsx';
 import TermsAndConditions from './pages/Termsconditions.jsx';
-
-
-
+import ComingSoon from './pages/ComingSoon.jsx';
+import MainLayout from './components/MainLayout';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -36,37 +33,32 @@ function App() {
   return (
     <>
       <main>
-        <Header />
-
         <Routes>
+          <Route element={<MainLayout />}>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero />
+                  <Features />
+                  <Benifits />
+                  <WorkProcess />
+                  <AppScreens />
+                  <CTASection />
+                  <PricingSection />
+                  <Testimonials />
+                  <Support />
+                </>
+              }
+            />
+            <Route path="/sign-in" element={<SignIn />} />
+            <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-conditions" element={<TermsAndConditions />} />
+          </Route>
 
-          <Route
-            path="/"
-            element={
-              <>
-                <Hero />
-                <Features />
-                <Benifits />
-                <WorkProcess />
-                <AppScreens />
-                <CTASection />
-                <PricingSection />
-                <Testimonials />
-                <Support />
-              </>
-            }
-          />
-          <Route path="/sign-in" element={<SignIn />} />
-          <Route path="/sign-up" element={<SignUp />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-conditions" element={<TermsAndConditions />} />
-          {/* <Route path="/features" element={<Features />} />
-          <Route path="/how-it-works" element={<HowItWorks />} />
-          <Route path="/support" element={<Support />} /> */}
+          <Route path="/coming-soon" element={<ComingSoon />} />
         </Routes>
-
-        <Footer />
-
       </main>
     </>
   )
