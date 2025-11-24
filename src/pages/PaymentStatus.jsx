@@ -45,7 +45,7 @@ const PaymentStatus = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-white relative overflow-hidden">
-           
+
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-10 left-10 w-72 h-72 bg-emerald-50 rounded-full opacity-60"></div>
                 <div className="absolute bottom-10 right-10 w-80 h-80 bg-slate-50 rounded-full opacity-70"></div>
@@ -53,7 +53,7 @@ const PaymentStatus = () => {
             </div>
 
             <div className="relative z-10 bg-white border border-slate-100 shadow-sm rounded-3xl px-8 py-12 text-center w-[90%] max-w-md animate-fade-in-up">
-              
+
                 {loading && (
                     <div className="space-y-6">
                         <div className="flex justify-center">
@@ -66,15 +66,15 @@ const PaymentStatus = () => {
                     </div>
                 )}
 
-               
+
                 {!loading && status === "success" && (
                     <div className="space-y-8">
-                      
+
                         <div className="flex justify-center">
                             <div className="w-24 h-24 bg-emerald-50 rounded-full flex items-center justify-center border border-emerald-100">
                                 <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-emerald-600" 
-                                         fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-emerald-600"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                                     </svg>
                                 </div>
@@ -97,10 +97,10 @@ const PaymentStatus = () => {
                         {/* Action Button */}
                         <button
                             onClick={() => navigate("/coming-soon", { replace: true })}
-                          className="w-full py-3 mt-2 bg-purple-600 text-white 
+                            className="w-full py-3 mt-2 bg-purple-600 text-white 
                                     rounded-xl font-semibold hover:bg-purple-700 
                                     transition disabled:opacity-50 disabled:cursor-not-allowed"
-                                        >
+                        >
                             Continue to Dashboard
                         </button>
 
@@ -120,8 +120,8 @@ const PaymentStatus = () => {
                         <div className="flex justify-center">
                             <div className="w-24 h-24 bg-red-50 rounded-full flex items-center justify-center border border-red-100">
                                 <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-red-600" 
-                                         fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-red-600"
+                                        fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                                     </svg>
                                 </div>
@@ -145,18 +145,13 @@ const PaymentStatus = () => {
                         <div className="space-y-3">
                             <button
                                 onClick={() => navigate("/coming-soon", { replace: true })}
-                               className="w-full py-3 mt-2 bg-purple-600 text-white 
+                                className="w-full py-3 mt-2 bg-purple-600 text-white 
                                     rounded-xl font-semibold hover:bg-purple-700 
                                     transition disabled:opacity-50 disabled:cursor-not-allowed"
-                                        >
+                            >
                                 Try Again
                             </button>
-                            {/* <button
-                                onClick={() => navigate("/", { replace: true })}
-                                className="w-full py-3 bg-white text-slate-700 font-medium rounded-xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-colors duration-200"
-                            >
-                                Back to Home
-                            </button> */}
+                           
                         </div>
 
                         {/* Support Info */}

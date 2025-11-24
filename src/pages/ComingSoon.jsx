@@ -116,12 +116,12 @@ const ComingSoon = () => {
         }
     };
 
-  
+
     const validateForm = () => {
         const errors = {};
         let isValid = true;
 
-       
+
         setFormErrors({
             parlourName: "",
             adminName: "",
@@ -156,7 +156,7 @@ const ComingSoon = () => {
             isValid = false;
         }
 
-        const phoneRegex = /^[6-9]\d{9}$/; 
+        const phoneRegex = /^[6-9]\d{9}$/;
         if (!formData.adminPhone.trim()) {
             errors.adminPhone = "Phone number is required";
             isValid = false;
@@ -184,7 +184,7 @@ const ComingSoon = () => {
 
         setApiError("");
 
-       
+
         if (!validateForm()) {
             return;
         }
@@ -276,7 +276,7 @@ const ComingSoon = () => {
         }
     };
 
-   
+
     const handlePlanSelect = async (plan) => {
         if (!parlourData || !parlourData.parlourId) {
             setApiError("Missing parlour data. Please register again.");
@@ -294,7 +294,7 @@ const ComingSoon = () => {
         setApiError(""); // Clear any previous errors
 
         try {
-           
+
             const returnUrl = `${window.location.origin}/payment/status?order_id=@order_id@`;
 
             console.log("Return URL:", returnUrl);
@@ -330,7 +330,7 @@ const ComingSoon = () => {
                         console.log("Payment details received:", result.paymentDetails);
                         verifyPaymentStatus(orderRes.order_id);
                     }
-                  // If user closes the popup or navigates away without completing payment
+                    // If user closes the popup or navigates away without completing payment
                     else if (result?.error) {
                         console.warn("Cashfree checkout error:", result.error);
                         // User closed the popup, stay on plans screen
@@ -398,14 +398,14 @@ const ComingSoon = () => {
         </div>
     );
 
-   
+
     const FieldError = ({ message }) => (
         <p className="mt-1 text-sm text-red-600">{message}</p>
     );
 
     // Right-side dynamic content
     const renderRightCard = () => {
-      
+
         if (loading && step !== "PAYMENT_PROCESSING") {
             return (
                 <div className="w-full max-w-md relative group">
@@ -522,7 +522,7 @@ const ComingSoon = () => {
             );
         }
         return (
-          <div className="w-full max-w-md">
+            <div className="w-full max-w-md">
 
 
                 <div className="bg-white rounded-3xl p-10 shadow-2xl shadow-purple-500/10 border border-gray-100">
@@ -533,7 +533,7 @@ const ComingSoon = () => {
                         <p className="text-gray-500 mt-2">Get early access to exclusive features</p>
                     </div>
 
-             
+
                     {apiError && <ErrorMessage message={apiError} />}
 
                     <form onSubmit={handleRegister} className="space-y-6">
@@ -594,7 +594,7 @@ const ComingSoon = () => {
                                 </div>
                             </div>
 
-                           
+
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-2">
                                     Email
@@ -631,7 +631,7 @@ const ComingSoon = () => {
                             </div>
                         </div>
 
-                      
+
                         <button
                             type="submit"
                             disabled={loading}
@@ -691,7 +691,7 @@ const ComingSoon = () => {
                         Experience the future of parlour management. Exclusive access for early adopters.
                     </p>
 
-                 
+
                     <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-12">
                         {Object.entries(timeLeft).map(([unit, value]) => (
                             <div key={unit} className="flex flex-col items-center justify-center w-20 h-24 bg-white/40 backdrop-blur-md rounded-2xl border border-white/60 shadow-[0_4px_20px_rgba(0,0,0,0.03)] group hover:scale-105 transition-transform duration-300">
@@ -706,7 +706,7 @@ const ComingSoon = () => {
                     </div>
                 </div>
 
-               
+
                 {renderRightCard()}
             </div>
 
