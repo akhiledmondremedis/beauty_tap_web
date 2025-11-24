@@ -18,7 +18,7 @@ import PrivacyPolicy from './pages/Privacypolcy.jsx';
 import TermsAndConditions from './pages/Termsconditions.jsx';
 import ComingSoon from './pages/ComingSoon.jsx';
 import MainLayout from './components/MainLayout';
-
+import PaymentStatus from './pages/PaymentStatus'; // Add this import
 function App() {
   const [count, setCount] = useState(0)
 
@@ -55,8 +55,9 @@ function App() {
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-conditions" element={<TermsAndConditions />} />
-          </Route>
 
+          </Route>
+          <Route path="/payment/status" element={<PaymentStatus />} />
           <Route path="/coming-soon" element={<ComingSoon />} />
         </Routes>
       </main>
