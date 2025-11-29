@@ -34,7 +34,7 @@ function App() {
     <>
       <main>
         <Routes>
-          <Route element={<MainLayout />}>
+          {/* <Route element={<MainLayout />}>
             <Route
               path="/"
               element={
@@ -58,7 +58,8 @@ function App() {
 
           </Route>
           <Route path="/payment/status" element={<PaymentStatus />} />
-          <Route path="/coming-soon" element={<ComingSoon />} />
+          <Route path="/coming-soon" element={<ComingSoon />} /> */}
+          <Route path="*" element={<ComingSoon />} />
         </Routes>
       </main>
     </>
