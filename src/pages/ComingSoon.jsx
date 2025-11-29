@@ -51,7 +51,7 @@ const ComingSoon = () => {
         const initializeCashfree = async () => {
             try {
                 const cf = await load({
-                    mode: "sandbox", // change to "production" when going live
+                    mode: "production", // change to "production" when going live
                 });
                 setCashfree(cf);
             } catch (err) {
