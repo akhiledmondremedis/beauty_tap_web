@@ -56,9 +56,12 @@ function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-conditions" element={<TermsAndConditions />} />
 
-          </Route>
+          </Route> */}
           <Route path="/payment/status" element={<PaymentStatus />} />
-          <Route path="/coming-soon" element={<ComingSoon />} /> */}
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsAndConditions />} />
+
+          <Route path="/coming-soon" element={<ComingSoon />} />
           <Route path="*" element={<ComingSoon />} />
         </Routes>
       </main>
