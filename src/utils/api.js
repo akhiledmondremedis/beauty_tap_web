@@ -42,6 +42,21 @@ export const getPlans = async () => {
     }
 };
 
+export const createSubscription = async (data) => {
+    try {
+        const body = data;
+
+        const response = await api.post("/public/create-subscription", body, {
+            headers: { "Content-Type": "application/json" }
+        });
+
+        return response.data;
+    } catch (error) {
+        console.error("Subscription error:", error);
+        throw error;
+    }
+};
+
 export const createPaymentOrder = async (data) => {
     try {
         const response = await api.post(
@@ -59,7 +74,7 @@ export const createPaymentOrder = async (data) => {
 
 export const verifyPayment = async (orderId) => {
     try {
-        
+
         const body = { orderId: orderId };
 
         console.log("Sending verification request with payload:", body);

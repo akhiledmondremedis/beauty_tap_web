@@ -6,6 +6,7 @@ import {
     getPlans,
     createPaymentOrder,
     verifyPayment,
+    createSubscription,
 } from "../utils/api";
 
 const ComingSoon = () => {
@@ -298,6 +299,22 @@ const ComingSoon = () => {
             const returnUrl = `${window.location.origin}/payment/status?order_id=@order_id@`;
 
             console.log("Return URL:", returnUrl);
+
+            const subscriptionPayload = {
+                parlourId: parlourData.parlourId,
+                planId: plan.id,
+            };
+
+            const subscriptionRes = await createSubscription(subscriptionPayload);
+            console.log("Subscription response:", subscriptionRes);
+
+            if (!subscriptionRes || !subscriptionRes.success) {
+                console.error("Subscription creation failed:", subscriptionRes);
+                setApiError("Failed to create subscription. Please try again.");
+                setLoading(false);
+                return;
+            }
+
 
             const orderPayload = {
                 parlourId: parlourData.parlourId,
