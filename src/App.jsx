@@ -19,14 +19,28 @@ import TermsAndConditions from './pages/Termsconditions.jsx';
 import ComingSoon from './pages/ComingSoon.jsx';
 import MainLayout from './components/MainLayout';
 import PaymentStatus from './pages/PaymentStatus'; // Add this import
+import AffiliateRegister from './pages/affiliate-partner/register.jsx';
+import AffiliatePartnerLogin from './pages/affiliate-partner/login.jsx';
+import AffiliateDashboard from './pages/affiliate-partner/dashboard.jsx';
+import ProtectedRoute from "./components/ProtectedRoute.jsx"
+import useAffiliateAuthRehydrate from "./hooks/useAffiliateAuthRehydrate"
+import EarningsPage from './pages/affiliate-partner/earnings.jsx';
+import { initFacebookPixel, trackPageView } from "./utils/pixel";
+
 function App() {
   const [count, setCount] = useState(0)
+  useAffiliateAuthRehydrate()
 
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "/bundle.js";
     script.async = true;
     document.body.appendChild(script);
+  }, []);
+
+  useEffect(() => {
+    initFacebookPixel();
+    trackPageView();
   }, []);
 
 
@@ -60,6 +74,17 @@ function App() {
           <Route path="/payment/status" element={<PaymentStatus />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsAndConditions />} />
+          <Route path="/affiliate-partner/register" element={<AffiliateRegister />} />
+          <Route path="/affiliate-partner/login" element={<AffiliatePartnerLogin />} />
+          <Route
+            path="/affiliate-partner/dashboard"
+            element={
+              <ProtectedRoute>
+                <AffiliateDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="/affiliate-partner/earnings" element={<EarningsPage />} />
 
           <Route path="/coming-soon" element={<ComingSoon />} />
           <Route path="*" element={<ComingSoon />} />
