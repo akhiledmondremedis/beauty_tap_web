@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// const API_BASE_URL = "https://prod.beautytap.in/api";
-const API_BASE_URL = "https://www.api.doctorpro.in/api";
+const API_BASE_URL = "https://prod.beautytap.in/api";
+// const API_BASE_URL = "https://www.api.doctorpro.in/api";
 
 const api = axios.create({
     baseURL: API_BASE_URL
