@@ -26,6 +26,7 @@ import ProtectedRoute from "./components/ProtectedRoute.jsx"
 import useAffiliateAuthRehydrate from "./hooks/useAffiliateAuthRehydrate"
 import EarningsPage from './pages/affiliate-partner/earnings.jsx';
 import { initFacebookPixel, trackPageView } from "./utils/pixel";
+import SupportPage from './pages/Support.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -76,6 +77,7 @@ function App() {
           <Route path="/terms-conditions" element={<TermsAndConditions />} />
           <Route path="/affiliate-partner/register" element={<AffiliateRegister />} />
           <Route path="/affiliate-partner/login" element={<AffiliatePartnerLogin />} />
+          <Route path="/support" element={< SupportPage />} />
           <Route
             path="/affiliate-partner/dashboard"
             element={
