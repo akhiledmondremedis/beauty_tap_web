@@ -27,6 +27,7 @@ import useAffiliateAuthRehydrate from "./hooks/useAffiliateAuthRehydrate"
 import EarningsPage from './pages/affiliate-partner/earnings.jsx';
 import { initFacebookPixel, trackPageView } from "./utils/pixel";
 import SupportPage from './pages/Support.jsx';
+import DownloadApp from './pages/DownloadApp.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -78,6 +79,7 @@ function App() {
           <Route path="/affiliate-partner/register" element={<AffiliateRegister />} />
           <Route path="/affiliate-partner/login" element={<AffiliatePartnerLogin />} />
           <Route path="/support" element={< SupportPage />} />
+          <Route path="/download" element={<DownloadApp />} />
           <Route
             path="/affiliate-partner/dashboard"
             element={
